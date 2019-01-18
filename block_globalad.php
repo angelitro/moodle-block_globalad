@@ -73,7 +73,7 @@ class block_globalad extends block_base {
         $canmanage = has_capability('block/globalad:manage', $context) && $PAGE->user_is_editing($this->instance->id);
 
         $titulo = get_config('globalad', 'title_globalad');
-        $anuncio = get_config('globalad', 'menssage_globalad');
+        $anuncio = get_config('globalad', 'message_globalad');
  
         if ($canview) {
 
