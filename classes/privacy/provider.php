@@ -13,12 +13,16 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_globalad
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- 
-defined('MOODLE_INTERNAL') || die();
 
+public static function get_metadata(collection $collection) : collection {
+ 
+    $collection->add_user_preference('title_globalad', 'privacy:metadata:preference:title_globalad');
+    $collection->add_user_preference('message_globalad', 'privacy:metadata:preference:menssage_globalad');
+ 
+    return $collection;
+}

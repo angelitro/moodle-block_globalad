@@ -13,10 +13,9 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_globalad
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@angelitro.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -24,26 +23,23 @@ defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
 
-	$settings->add(new admin_setting_heading(
-	            'headerconfig',
-	            get_string('headerconfig', 'block_globalad'),
-	            get_string('descconfig', 'block_globalad')
-	        ));
+    $settings->add(new admin_setting_heading(
+               'headerconfig',
+                get_string('headerconfig', 'block_globalad'),
+                get_string('descconfig', 'block_globalad')
+            ));
 	
-	$settings->add(new admin_setting_confightmleditor(
-	            'globalad/title_globalad',
-	            get_string('tit', 'block_globalad'),
-	            get_string('desctit', 'block_globalad'),
-	            "Ad title"
-	            
+    $settings->add(new admin_setting_confightmleditor(
+               'globalad/title_globalad',
+                get_string('tit', 'block_globalad'),
+                get_string('desctit', 'block_globalad'),
+                "Ad title"
 	        ));
 
-	$settings->add(new admin_setting_confightmleditor(
-	            'globalad/menssage_globalad',
-	            get_string('ad_text', 'block_globalad'),
-	            get_string('descadtext', 'block_globalad'),
-	            "Ad content"
-	            
-	        ));
-
+    $settings->add(new admin_setting_confightmleditor(
+               'globalad/message_globalad',
+                get_string('ad_text', 'block_globalad'),
+                get_string('descadtext', 'block_globalad'),
+                "Ad content"
+            ));
 }

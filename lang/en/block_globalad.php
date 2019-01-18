@@ -13,10 +13,9 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_statics
- * @copyright 2018, angelitr0 <angel@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@angelitro.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -44,3 +43,6 @@ $string['descadtext'] = 'Ad that will be shown in all blocks';
 
 $string['globalad:viewglobalad'] = 'View Globalad block';
 $string['globalad:manageglobalad'] = 'Manage Globalad block';
+
+$string['privacy:metadata:preference:title_globalad'] = 'The title that a specific manager that will be displayed in the block.';
+$string['privacy:metadata:preference:message_globalad'] = 'Content ad that a specific manager that will be displayed in the block.';

@@ -44,3 +44,6 @@ $string['descadtext'] = 'Anuncio que se mostrará en todos los bloques';
 
 $string['globalad:viewglobalad'] = 'Ver bloque Globalad';
 $string['globalad:manageglobalad'] = 'Administrar bloque Globalad';
+
+$string['privacy:metadata:preference:title_globalad'] = 'El título que un administrador específico que se mostrará en el bloque.';
+$string['privacy:metadata:preference:message_globalad'] = 'Contenido del anuncio que un administrador específico que se mostrará en el bloque.';

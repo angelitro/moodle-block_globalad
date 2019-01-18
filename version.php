@@ -13,18 +13,17 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
- 
 /**
  * @package   block_globalad
- * @copyright 2018, Angel Fraile <angel@angelitro.com>
+ * @copyright 2018, Angel Fraile <angelluisfraile@angelitro.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
  
 defined('MOODLE_INTERNAL') || die();
  
-$plugin->version = 2018102503;
+$plugin->version = 2019011700;
 $plugin->requires = 2014051200; // Moodle 2.7.0 is required.
 $plugin->cron = 0;
 $plugin->component = 'block_globalad';
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 'v1.0';
+$plugin->release = 'v1.1';
