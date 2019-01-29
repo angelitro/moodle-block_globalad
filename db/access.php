@@ -15,14 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
  * @package   block_globalad
- * @copyright 2018, angelitr0 <angelluisfraile@angelitro.com>
+ * @copyright 2018, angelitr0 <angelluisfraile@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
- 
     'block/globalad:myaddinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
@@ -32,8 +31,7 @@ $capabilities = array(
  
         'clonepermissionsfrom' => 'moodle/my:manageblocks'
     ),
- 
-    'block/globalad:addinstance' => array(
+     'block/globalad:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
         'captype' => 'write',
         'contextlevel' => CONTEXT_BLOCK,
@@ -44,7 +42,6 @@ $capabilities = array(
  
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
     ),
-
     'block/globalad:view' => array(
         'captype' => 'read',
         'contextlevel' => CONTEXT_COURSE,
@@ -57,7 +54,6 @@ $capabilities = array(
         'manager' => CAP_ALLOW
         )
     ),
- 
     'block/globalad:manage' => array(
         'captype' => 'read',
         'contextlevel' => CONTEXT_COURSE,

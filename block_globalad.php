@@ -34,7 +34,7 @@ class block_globalad extends block_base {
 
     public function html_attributes() {
         $attributes = parent::html_attributes(); // Get default values
-        $attributes['class'] .= ' block_'. $this->name(); // Append our class to class attribute
+        $attributes['class'] .= ' block_' .  $this->name(); // Append our class to class attribute
         return $attributes;
     }
 
@@ -42,9 +42,13 @@ class block_globalad extends block_base {
         return true;
     }
 
-    public function get_content() {
+    public function get_content() { // Contenido del bloque.
 
         global $DB, $COURSE, $CFG, $PAGE;
+
+        if ($this->content !== NULL) {
+            return $this->content;
+        }        
         
         $this->content = new stdClass;
         $this->content->text = '';
@@ -53,7 +57,7 @@ class block_globalad extends block_base {
             return $this->content;
         }
 
-        $course = $DB->get_record('course', array('id' => $COURSE->id));
+        $course = $COURSE;
 
         if (!$course) {
             print_error('coursedoesnotexists');
@@ -78,10 +82,9 @@ class block_globalad extends block_base {
         if ($canview) {
 
              $this->content->text = $anuncio;
-
         }
 
-        if ($canmanage) { //Editar el anuncio global
+        if ($canmanage) { //Editar el anuncio global.
 
             $url = new moodle_url('/admin/settings.php?section=blocksettingglobalad');
             $this->content->text .= html_writer::start_tag('div');

@@ -22,20 +22,17 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
-
     $settings->add(new admin_setting_heading(
                'headerconfig',
                 get_string('headerconfig', 'block_globalad'),
                 get_string('descconfig', 'block_globalad')
             ));
-	
     $settings->add(new admin_setting_confightmleditor(
                'globalad/title_globalad',
                 get_string('tit', 'block_globalad'),
                 get_string('desctit', 'block_globalad'),
                 "Ad title"
 	        ));
-
     $settings->add(new admin_setting_confightmleditor(
                'globalad/message_globalad',
                 get_string('ad_text', 'block_globalad'),
