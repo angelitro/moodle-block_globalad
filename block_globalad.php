@@ -44,7 +44,9 @@ class block_globalad extends block_base {
 
     public function get_content() { // Contenido del bloque.
 
-        global $DB, $COURSE, $CFG, $PAGE;
+        global $DB, $COURSE, $CFG, $PAGE, $USER;
+
+        $userid = null;
 
         if ($this->content !== NULL) {
             return $this->content;
@@ -63,17 +65,23 @@ class block_globalad extends block_base {
             print_error('coursedoesnotexists');
         }
 
-        if ($course->id == SITEID) {
+        if ($context = context_user::instance($USER->id)) {
+
+        } else if ($course->id == SITEID) {
+
             $context = context_system::instance();
+
         } else {
+
             $context = context_course::instance($course->id);
+
         }
 
         if (!empty($this->config->text)) {
            $this->content->text = $this->config->text;
         }
 
-        $canview = has_capability('block/globalad:view', $context);
+        $canview = has_capability('block/globalad:view', $context) || has_capability('block/globalad:myaddinstance', $context);
         $canmanage = has_capability('block/globalad:manage', $context) && $PAGE->user_is_editing($this->instance->id);
 
         $titulo = get_config('globalad', 'title_globalad');
